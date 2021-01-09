@@ -1,0 +1,31 @@
+//-
+  *** this template created by labib software ***
+  labib instagram: https://www.instagram.com/labib.software/
+  labib facebook: https://www.facebook.com/labib.software/
+  labib website: https://www.labib.gq
+
+- var pageTitle = 'Home';
+<!DOCTYPE html>
+html
+  head
+  //- title
+  title
+    - if (pageTitle)
+      | labib template | #{pageTitle}
+    - else
+      | labib template
+
+  //- meta
+  mate(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  //- styles
+  link(rel="stylesheet", href="./css/main.css")
+
+  body
+  .page.homePage
+    include pug/layout/sidebar
+    .content-area
+      h1 content goes here
+
+  script(src="http://localhost:35729/livereload.js")
