@@ -16,8 +16,7 @@ html
       | labib template
 
   //- meta
-  mate(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  include pug/layout/meta
 
   //- styles
   include pug/layout/styles
@@ -26,7 +25,8 @@ html
   .page.homePage
     include pug/layout/sidebar
     .content-area
-      .header
-        i.fa.fa-fw.fa-lg.fa-cog.toggle-sidebar
+      include pug/layout/header
       .content
+        .container
+          h1 test
     include pug/layout/scriptes
