@@ -32,7 +32,7 @@ gulp.task("css", () => {
 gulp.task("js", () => {
   console.log("js task started");
   return gulp
-    .src(`./stage/js/*.js`)
+    .src(`stage/js/*.js`)
     .pipe(concat("main.js"))
     .pipe(minify())
     .pipe(gulp.dest(`./dist/js`))

@@ -20,12 +20,13 @@ html
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
   //- styles
-  link(rel="stylesheet", href="./css/main.css")
+  include pug/layout/styles
 
   body
   .page.homePage
     include pug/layout/sidebar
     .content-area
-      h1 content goes here
-
-  script(src="http://localhost:35729/livereload.js")
+      .header
+        i.fa.fa-fw.fa-lg.fa-cog.toggle-sidebar
+      .content
+    include pug/layout/scriptes
