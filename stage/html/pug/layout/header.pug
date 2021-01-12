@@ -1,3 +1,23 @@
 .header
-  h2 hi
   i.fa.fa-lg.fa-cog.toggle-sidebar
+  .dropdown.notifications-container
+    i#notifications.fa.fa-fw.fa-bell.fa-lg.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+    .dropdown-menu(aria-labelledby="notifications")
+      .noti-head
+        |notifications
+        span 8
+      .noti-content
+        //- |content
+        ul.list-unstyled
+          li
+            i.far.fa-envelope.fa-lg
+            |you got email from salah
+          li
+            i.far.fa-envelope.fa-lg
+            |you got email from salah
+          li
+            i.far.fa-envelope.fa-lg
+            |you got email from salah
+      hr
+      .noti-foot: a(href="#") View All Notifications
+      //- a.dropdown-item(href="#") Action One

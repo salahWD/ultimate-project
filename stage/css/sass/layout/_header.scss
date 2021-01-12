@@ -1,18 +1,88 @@
 .header {
+  padding: 20px;
+  padding-#{$left}: 3.2rem;
+  position: relative;
   background-color: $white;
+
   .toggle-sidebar {
-    top: 35px;
+    top: 50%;
+    #{$left}: -8px;
     padding: 15px;
     color: $white;
-    position: fixed;
-    #{$left}: 242px;
-    cursor: pointer;
     transition: .3s;
+    cursor: pointer;
     border-radius: 6px;
+    position: absolute;
+    -webkit-transition: .3s;
+    transform: translateY(-50%);
     background-color: $fDarkGray;
 
     &.no-sidebar {
       #{$left}: -8px !important;
+    }
+  }
+  .dropdown-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: $white;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: $fDarkGray;
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    padding: 0;
+    border: none;
+    color: $white;
+    min-width: 500px;
+    margin-top: 0.7rem;
+    letter-spacing: 0.05rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+    &::before {
+      top: -1.6rem;
+      content: '';
+      display: block;
+      #{$left}: .5rem;
+      position: absolute;
+      border: .8rem solid transparent;
+      border-bottom-color: $fDarkGray;
+    }
+    .noti-head {
+      background-color: $fDarkGray;
+      color: $white;
+      padding: .8rem 1rem;
+      span {
+        float: $right;
+      }
+    }
+    .noti-content {
+      padding: .8rem 1rem;
+      color: $fDarkGray;
+      li {
+        padding: .9rem 1.1rem;
+        i {
+          padding: .3rem .7rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+    hr {
+      background-color: $fDarkGray;
+      margin: 0 1rem;
+    }
+    .noti-foot {
+      text-align: center;
+      padding: .8rem 1rem;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
