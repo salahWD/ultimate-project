@@ -13,16 +13,106 @@
     &.no-sidebar {
       #{$left}: -250px;
     }
-    
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 10px;
-      color: #fff;
+    .logo-area {
+      color: $white;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      
+      img, svg {// if ther is an img
+        max-width: 120px;
+        max-height: 100px;
+      }
+    }
+    .link-area {
+      padding: 0 12px;
 
+      // all links
       li {
-        padding: 15px;
+        position: relative;
+
+        a {
+          transition: .3s;
+          padding: 10px 20px;
+          color: $fLightGray;
+          display: block;
+          text-decoration: none;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+      // main links
+      > li > a {
+          position: relative;
+          color: $white;
+          
+          &:hover {
+            padding-#{$left}: 30px;
+          }
+          &::before {
+            top: 50%;
+            width: 8px;
+            #{$left}: 0;
+            content: '';
+            height: 8px;
+            position: absolute;
+            border-radius: 10px;
+            border: 2px solid $white;
+            transform: translateY(-50%);
+          }
+          .toggle-submenu {
+            width: 30px;
+            height: 30px;
+            float: $right;
+            display: flex;
+            cursor: pointer;
+            transition: .15s;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background-color: #444444;
+            &.active {
+              background-color: #777 !important;
+              transform: rotate(90deg);
+            }
+          }
+      }
+      // child links
+      .child-links {
+        display: none;
         padding-#{$left}: 15px;
+        position: relative;
+        
+        &::before {
+          content: '';
+          top: 0;
+          width: 3px;
+          height: 100%;
+          #{$left}: 2px;
+          position: absolute;
+          background-color: #666;
+        }
+        a {
+          position: relative;
+          &::before {
+            top: 0;
+            width: 3px;
+            opacity: 0;
+            content: '';
+            #{$left}: 2px;
+            height: 100%;
+            transition: .3s;
+            position: absolute;
+            background-color: #666;
+          }
+          &:hover::before {
+            opacity: 1;
+            #{$left}: -13px;
+            background-color: $white;
+          }
+        }
       }
     }
   }

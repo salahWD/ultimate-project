@@ -1,6 +1,20 @@
 .sidebar
-  ul.list-unstyled
-    li this is option 1
-    li this is option 2
-    li this is option 3
-    li this is option 4
+  .logo-area.text-center Labib
+  ul.link-area.list-unstyled
+    li: a(href="#") Home
+    li
+      a(href="#")
+        |Forms
+        i.fa.fa-angle-right.toggle-submenu
+      ul.child-links.list-unstyled
+        li: a(href="#") input
+        li: a(href="#") Textarea
+        li: a(href="#") Checkbox
+        li: a(href="#") radio
+    li
+      a(href="#")
+        |Misc
+        i.fa.fa-angle-right.toggle-submenu
+      ul.child-links.list-unstyled
+        li: a(href="#") Loading
+        li: a(href="#") Breadcrumbs
