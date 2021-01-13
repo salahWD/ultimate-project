@@ -4,6 +4,9 @@
   position: relative;
   background-color: $white;
 
+  .dropdown {
+    display: inline-block;
+  }
   .toggle-sidebar {
     top: 50%;
     #{$left}: -8px;
@@ -21,74 +24,154 @@
       #{$left}: -8px !important;
     }
   }
-  .dropdown-toggle {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    color: $white;
-    cursor: pointer;
-    border-radius: 50%;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    background-color: $fDarkGray;
-    &::after {
-      display: none;
-    }
-  }
-  .dropdown-menu {
-    padding: 0;
-    border: none;
-    color: $white;
-    min-width: 500px;
-    margin-top: 0.7rem;
-    letter-spacing: 0.05rem;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-
-    &::before {
-      top: -1.6rem;
-      content: '';
-      display: block;
-      #{$left}: .5rem;
-      position: absolute;
-      border: .8rem solid transparent;
-      border-bottom-color: $fDarkGray;
-    }
-    .noti-head {
-      background-color: $fDarkGray;
+  .notifications-container {
+    .dropdown-toggle {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
       color: $white;
-      padding: .8rem 1rem;
-      span {
-        float: $right;
+      cursor: pointer;
+      border-radius: 50%;
+      align-items: center;
+      display: inline-flex;
+      justify-content: center;
+      background-color: $fDarkGray;
+      &::after {
+        display: none;
       }
     }
-    .noti-content {
-      color: $fDarkGray;
-      padding: .4rem 1rem;
-
-      ul {
-        margin: 0;
-
-        li {
-          padding: .9rem 1.1rem;
-          color: $tLightGray;
-          i {
-            color: $fLightGray;
-            padding: .3rem .7rem;
-            margin-right: .5rem;
+    .dropdown-menu {
+      padding: 0;
+      border: none;
+      color: $white;
+      min-width: 500px;
+      margin-top: 0.7rem;
+      letter-spacing: 0.05rem;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  
+      &::before {
+        top: -1.6rem;
+        content: '';
+        display: block;
+        #{$left}: .5rem;
+        position: absolute;
+        border: .8rem solid transparent;
+        border-bottom-color: $fDarkGray;
+      }
+      .noti-head {
+        background-color: $fDarkGray;
+        color: $white;
+        padding: .8rem 1rem;
+        span {
+          float: $right;
+        }
+      }
+      .noti-content {
+        color: $fDarkGray;
+        padding: .4rem 1rem;
+  
+        ul {
+          margin: 0;
+  
+          li {
+            padding: .9rem 1.1rem;
+            color: $tLightGray;
+            i {
+              color: $fLightGray;
+              padding: .3rem .7rem;
+              margin-right: .5rem;
+            }
           }
         }
       }
+      hr {
+        background-color: $fDarkGray;
+        margin: 0 1rem;
+      }
+      .noti-foot {
+        text-align: center;
+        padding: .8rem 1rem;
+        a {
+          text-decoration: none;
+        }
+      }
     }
-    hr {
-      background-color: $fDarkGray;
-      margin: 0 1rem;
+
+  }
+  .usermenu-container {
+    float: $right;
+
+    .usermenu {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+
+      .avatar {
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+      }
+      .name {
+        cursor: pointer;
+        font-weight: bold;
+        margin-#{$left}: 0.9rem;
+        i {
+          margin-#{$left}: 0.4rem;
+        }
+      }
     }
-    .noti-foot {
-      text-align: center;
-      padding: .8rem 1rem;
-      a {
-        text-decoration: none;
+    .dropdown-menu {
+      padding: 1.2rem;
+      border: none;
+      color: $tDarkGray;
+      min-width: 500px;
+      margin-top: 0.7rem;
+      letter-spacing: 0.05rem;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  
+      &::before {
+        top: -1.6rem;
+        content: '';
+        display: block;
+        #{$right}: 1rem;
+        position: absolute;
+        border: .8rem solid transparent;
+        border-bottom-color: $fLightGray;
+      }
+      .user-info {
+        h3 {
+          color: $fblue;
+          font-weight: bold;
+        }
+        p {
+          color: $tLightGray;
+        }
+      }
+      .activities-list {
+        li {
+          color: $tDarkGray;
+          padding: 0.4rem 0.7rem;
+          &:nth-of-type(odd) {
+            background-color: $fBGGray;
+          }
+        }
+      }
+      .center-box {
+        border-#{$left}: 1px solid $fLightGray;
+        border-#{$right}: 1px solid $fLightGray;
+      }
+      .link-box {
+        padding: .7rem;
+        border-radius: 4px;
+        background-color: $fBGGray;
+        .icon {
+          margin-right: 3px;
+
+          &.fa-cog {color: $fblue;}
+          &.fa-user {color: $fgreen;}
+          &.fa-power-off {color: $fred;}
+        }
       }
     }
   }

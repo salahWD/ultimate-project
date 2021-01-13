@@ -1,5 +1,6 @@
 .header
   i.fa.fa-lg.fa-cog.toggle-sidebar
+  //-  dropdown menu notifications
   .dropdown.notifications-container
     i#notifications.fa.fa-fw.fa-bell.fa-lg.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
     .dropdown-menu(aria-labelledby="notifications")
@@ -20,4 +21,33 @@
             |you got email from salah
       hr
       .noti-foot: a(href="#") View All Notifications
-      //- a.dropdown-item(href="#") Action One
+  //-  user menu profile
+  .dropdown.usermenu-container
+    .usermenu#usermenu(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+      img.avatar.rounded-circle(src="https://via.placeholder.com/300.png/09f/fff")
+      span.name salah user
+        i.fa.fa-angle-down
+    .dropdown-menu.dropdown-menu-right(aria-labelledby="usermenu")
+      .user-info
+        h3 salah bakhash
+        p Premium Member
+      hr
+      ul.list-unstyled.activities-list
+        li added commint on post "how to make bla"
+        li like "labib software" page
+        li follow "Tobz" and like his page
+      hr
+      .row
+        .col
+          .link-box
+            i.fa.fa-cog.fa-lg.fa-fw.icon
+            span Setting
+        .col.center-box
+          .link-box.tow
+            i.fa.fa-user.fa-lg.fa-fw.icon
+            span my profile
+        .col
+          .link-box
+            i.fa.fa-power-off.fa-lg.fa-fw.icon
+            span Logout
+  .clearfix
